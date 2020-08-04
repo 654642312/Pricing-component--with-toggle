@@ -1,2 +1,2 @@
-# Frontend Mentor - File Transfer pricing component
+# Frontend Mentor - Pricing-component--with-toggle
 
