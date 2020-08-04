@@ -1,0 +1,167 @@
+:root{
+    --color-gradient-primary: hsl(236, 72%, 79%);
+    --color-gradient-secondary: hsl(237, 63%, 64%);
+    --color-primary: hsl(240, 78%, 98%);
+    --color-seconday: hsl(234, 14%, 74%);
+    --color-third: hsl(233, 13%, 49%);
+    --color-fourth: hsl(232, 13%, 33%);
+    font-size: 15px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--color-primary);
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.switch {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    appearance: none;
+    outline: none;
+    background: linear-gradient(
+        to right, var(--color-gradient-primary) 0%, var(--color-gradient-secondary) 100%
+    );
+    border-radius: 1.5rem;
+    transition: .5s;
+}
+
+.container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-third);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 1.2rem;
+    top: 4px;
+    left: 5px;
+    background: #fff;
+    transition: .5s;
+}
+
+.switch:checked::before{
+    left: 45px;
+}
+
+.title {
+    color: var(--color-fourth);
+}
+
+.card__list {
+    border-top: 1px solid var(--color-seconday);
+    list-style: none;
+    padding: 0;
+}
+
+.card {
+    background: #fff;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    box-shadow: 0 .4rem 8rem rgba(0, 0, 0, .1);
+}
+
+.monthly {
+    display: none;
+}
+
+.card.show-monthly .card__price .annually {
+    display: none;
+} 
+
+.card.show-monthly .card__price .monthly {
+    display: block;
+}
+
+
+.card.premium {
+    background: linear-gradient(
+        to right, var(--color-gradient-primary) 0%, var(--color-gradient-secondary) 100%
+    );
+    color: #fff;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.card__title {
+    color: var(--color-third);
+}
+
+.card__title.premium, .card__price.premium, .card__list-item.premium {
+    color: #fff;
+}
+
+.card__price {
+    font-size: 3rem;
+    color: var(--color-fourth);
+}
+
+.card__list-item {
+    border-bottom: 1px solid var(--color-seconday);
+    padding: 1rem 0;
+    color: var(--color-third);
+}
+
+.btn {
+    background: linear-gradient(
+        to right, var(--color-gradient-primary) 0%, var(--color-gradient-secondary) 100%
+    );
+    border: none;
+    padding: .5rem 5rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn.premium {
+    background: #fff;
+    color: var(--color-gradient-secondary);
+}
+
+@media screen and (min-width: 480px){
+    .plans {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .plans {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card.premium{
+       transform: scale(1.1);
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+}

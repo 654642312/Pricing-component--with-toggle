@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <title>Frontend Mentor | Pricing component with toggle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Our Pricing</h1>
+
+      <div class="container-button">
+        <span>Annually</span>
+        <span class="container-switch">
+          <input class="switch" type="checkbox" id="switch" unchecked />
+        </span>
+        <span>Monthly</span>
+      </div>
+
+      <section class="plans">
+        <div class="card">
+          <h3 class="card__title">Basic</h3>
+          <p class="card__price">
+            <span class="monthly">&dollar; 19.99</span>
+            <span class="annually">&dollar; 199.99</span>
+          </p>
+          <ul class="card__list">
+            <li class="card__list-item">500 CG STORAGE</li>
+            <li class="card__list-item">2 Users Allowed</li>
+            <li class="card__list-item">send up to 3 CG</li>
+          </ul>
+          <button class="btn">Learn more</button>
+        </div>
+
+        <div class="card premium">
+          <h3 class="card__title premium">Professional</h3>
+          <p class="card__price premium">
+            <span class="monthly">&dollar; 24.99</span>
+            <span class="annually">&dollar; 249.99</span>
+          </p>
+          <ul class="card__list premium">
+            <li class="card__list-item premium">1 TB STORAGE</li>
+            <li class="card__list-item premium">5 Users Allowed</li>
+            <li class="card__list-item premium">send up to 10 CG</li>
+          </ul>
+          <button class="btn premium">Learn more</button>
+        </div>
+
+        <div class="card card-third">
+          <h3 class="card__title">Master</h3>
+          <p class="card__price">
+            <span class="monthly">&dollar; 39.99</span>
+            <span class="annually">&dollar; 399.99</span>
+          </p>
+          <ul class="card__list">
+            <li class="card__list-item">2 TB STORAGE</li>
+            <li class="card__list-item">10 Users Allowed</li>
+            <li class="card__list-item">send up to 20 CG</li>
+          </ul>
+          <button class="btn">Learn more</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
